@@ -1,30 +1,42 @@
-# AlpineWSL
-Alpine Linux on WSL (Windows 10 1803 or later)
+# GentooWSL
+Gentoo Linux on WSL (Windows 10 1803 or later)
 based on [wsldl](https://github.com/yuk7/wsldl)
 
-![screenshot](https://raw.githubusercontent.com/wiki/yuk7/wsldl/img/Alpine_Arch_Cent.png)
+![screenshot](https://github.com/sileshn/GentooWSL/blob/master/img/screenshot.png)
 
-[![Build Status](https://img.shields.io/travis/yuk7/AlpineWSL.svg?style=flat-square)](https://travis-ci.org/yuk7/AlpineWSL)
-[![Github All Releases](https://img.shields.io/github/downloads/yuk7/AlpineWSL/total.svg?style=flat-square)](https://github.com/yuk7/AlpineWSL/releases/latest)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 ![License](https://img.shields.io/github/license/yuk7/AlpineWSL.svg?style=flat-square)
-
-### [Download](https://github.com/yuk7/AlpineWSL/releases/latest)
-
 
 ## Requirements
 * Windows 10 1803 April 2018 Update x64 or later.
 * Windows Subsystem for Linux feature is enabled.
 
 ## Install
-#### 1. [Download](https://github.com/yuk7/AlpineWSL/releases/latest) installer zip
+#### 1. [Download](https://github.com/sileshn/GentooWSL/releases/latest) installer zip file.
 
 #### 2. Extract all files in zip file to same directory
 
-#### 3.Run Alpine.exe to Extract rootfs and Register to WSL
+#### 3. Run Gentoo.exe to extract rootfs and register to WSL
 Exe filename is using to the instance name to register.
 If you rename it, you can register with a different name and have multiple installs.
 
+#### 4. First steps to perform after install
+```shell
+$ emerge --sync
+$ emerge --update --deep --with-bdeps=y @world
+$ emerge --update --deep --with-bdeps=y @system
+```
+#### 5. Create root password and new user
+```shell
+$ passwd
+$ sed -i 's/# %wheel ALL=(ALL) ALL/%wheel ALL=(ALL) ALL/g' /etc/sudoers
+$ useradd -g users -G wheel -s /bin/bash -m <username>
+$ passwd <username>
+```
+Exit and set <username> as default user.
+```shell
+> Gentoo.exe config --default-user <username>
+```
 
 ## How-to-Use(for Installed Instance)
 #### exe Usage
@@ -68,12 +80,12 @@ Usage :
 
 #### How to uninstall instance
 ```dos
->Alpine.exe clean
+> Gentoo.exe clean
 
 ```
 
 ## How-to-Build
-AlpineWSL can build on GNU/Linux or WSL.
+GentooWSL can build on GNU/Linux or WSL.
 
 `curl`,`bsdtar`,`tar`(gnu) and `sudo` is required for build.
 ```shell

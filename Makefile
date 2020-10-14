@@ -43,7 +43,7 @@ rootfs: base.tar
 
 base.tar:
 	@echo -e '\e[1;31mExporting base.tar using docker...\e[m'
-	docker run --name gentoowsl gentoo/stage3:latest /bin/bash -c "emerge-webrsync; emerge -vDuN system; emerge -vDuN world; emerge sudo;"
+	docker run --name gentoowsl gentoo/stage3:latest /bin/bash -c "emerge-webrsync; emerge -vDuN system; emerge -vDuN world; emerge sys-apps/lsb-release sudo;"
 	docker export --output=base.tar gentoowsl
 	docker rm -f gentoowsl
 

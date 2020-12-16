@@ -1,15 +1,15 @@
 # GentooWSL
-Gentoo Linux on WSL (Windows 10 1803 or later)
-based on [wsldl](https://github.com/yuk7/wsldl)
+Gentoo Linux on WSL (Windows 10 1803 or later) based on [wsldl](https://github.com/yuk7/wsldl)
 
 ![screenshot](https://github.com/sileshn/GentooWSL/blob/master/img/screenshot.png)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) ![License](https://img.shields.io/github/license/yuk7/AlpineWSL.svg?style=flat-square)
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-![License](https://img.shields.io/github/license/yuk7/AlpineWSL.svg?style=flat-square)
-
-## Requirements
-* Windows 10 1803 April 2018 Update x64 or later.
-* Windows Subsystem for Linux feature is enabled.
+## 💻 Requirements
+* For x64 systems: Version 1903 or higher, with Build 18362 or higher.
+* For ARM64 systems: Version 2004 or higher, with Build 19041 or higher.
+* Builds lower than 18362 do not support WSL 2.
+* Enable Windows Subsystem for Linux feature.
+* Download and install the Linux kernel update package from [here](https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi).
 
 ## Install
 #### 1. [Download](https://github.com/sileshn/GentooWSL/releases/latest) installer zip file.

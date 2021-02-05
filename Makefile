@@ -3,7 +3,7 @@ LNCR_EXE=Gentoo.exe
 
 DLR=curl
 DLR_FLAGS=-L
-LNCR_ZIP_URL=https://github.com/yuk7/wsldl/releases/download/20121600/icons.zip
+LNCR_ZIP_URL=https://github.com/yuk7/wsldl/releases/download/21020500/icons.zip
 LNCR_ZIP_EXE=Gentoo.exe
 
 all: $(OUT_ZIP)

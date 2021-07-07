@@ -2,7 +2,8 @@
 Gentoo Linux on WSL (Windows 10 1803 or later) based on [wsldl](https://github.com/yuk7/wsldl)
 
 [![Screenshot-2021-06-04-075435.png](https://i.postimg.cc/GhFsDmTq/Screenshot-2021-06-04-075435.png)](https://postimg.cc/56t0d13C)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) ![License](https://img.shields.io/github/license/yuk7/AlpineWSL.svg?style=flat-square)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) 
+[![License](https://img.shields.io/github/license/sileshn/GentooWSL.svg?style=flat-square)](https://raw.githubusercontent.com/sileshn/GentooWSL/master/LICENSE)
 
 ## 💻 Requirements
 * For x64 systems: Version 1903 or higher, with Build 18362 or higher.
